@@ -1,0 +1,151 @@
+/* Resetting default styles and setting box model to border-box */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Setting font and background color for the entire body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styling for the main content container */
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the search input box */
+.search {
+    width: 280px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+/* Stylish border on focus */
+.search:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.7), 0 0 20px rgba(33, 150, 243, 0.4);
+    transform: scale(1.02);
+}
+
+/* Placeholder style */
+.search::placeholder {
+    color: #999;
+}
+
+/* Stylish search icon */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* Clear button to reset the search */
+.clear-icon {
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    color: #999;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Styling for the GitHub profile image */
+.profileimg img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+/* Styling for the list of repositories */
+.profileRepos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* Styling for individual repositories within the grid */
+.profileRepos .reponame {
+    height: 70px;
+    font-size: 18px;
+    background-color: #64b5f6;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for anchor tag */
+.profileRepos .reponame:hover {
+    background-color: #2196f3;
+}
+
+/* Styling for the user profile details container */
+.profiledetails {
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for anchor tags within the profile details section */
+.profiledetails a {
+    text-decoration: none;
+    color: #2196f3;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for anchor tags in the profile details section */
+.profiledetails a:hover {
+    color: #1565c0;
+}
+
+/* Styling for the section displaying followers, following, and repo count */
+.profilefollow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styling for individual follower, following, and repo count elements */
+.profilefollow h3 {
+    margin-right: 20px;
+    font-size: 20px;
+    color: #333;
+}
